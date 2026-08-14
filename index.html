@@ -14,11 +14,28 @@
         <form class="form js-form">
            <div class="form-control">
                 <label for="name">Nome:</label>
-                <input class="form-field js-field" id="name" maxlength="120" name="name" required type="text">
+                <input 
+                    name="name" 
+                    type="text"
+                    class="form-field js-field" 
+                    id="name" 
+                    minlength="3" 
+                    maxlength="120" 
+                    pattern="[A-Za-zÀ-ÿ\s]+" 
+                    required 
+                    oninvalid="this.setCustomValidity('Insira apenas letras neste campo.')"
+                    oninput="this.setCustomValidity('')"
+                >
            </div>
             <div class="form-control">
                 <label for="birth-date">Data de Nascimento:</label>
-                <input class="form-field js-field" id="birth-date" name="birth-date" required type="date">
+                <input 
+                    type="date"
+                    id="birth-date" 
+                    name="birth-date" 
+                    class="form-field js-field" 
+                    required 
+                >
             </div>
             <button type="submit" class="btn-send">Salvar</button>
         </form>
