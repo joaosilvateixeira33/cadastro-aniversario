@@ -17,7 +17,7 @@
                 <input 
                     name="name" 
                     type="text"
-                    class="form-field js-field" 
+                    class="form-field js-field-name" 
                     id="name" 
                     minlength="3" 
                     maxlength="120" 
@@ -33,12 +33,21 @@
                     type="date"
                     id="birth-date" 
                     name="birth-date" 
-                    class="form-field js-field" 
+                    class="form-field js-field-birthday" 
                     required 
                 >
             </div>
-            <button type="submit" class="btn-send">Salvar</button>
+            <button type="submit" class="btn-send js-btn-send">Salvar</button>
         </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Data de Nascimento</th>
+                </tr>
+            </thead>
+            <tbody class="js-table"></tbody>
+        </table>
     </main>
     <script src="scripts/main.js"></script>
 </body>

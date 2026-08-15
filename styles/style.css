@@ -59,4 +59,41 @@ main{
     align-self: center;
 }
 
+table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
 
+thead {
+  background-color: #7c3aed;
+  color: #ffffff;
+}
+
+th, td {
+  padding: 0.85rem 1.2rem;
+  text-align: left;
+}
+
+th {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.15s;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background-color: #f9fafb;
+}
