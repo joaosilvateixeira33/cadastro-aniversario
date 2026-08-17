@@ -97,3 +97,13 @@ tbody tr:last-child {
 tbody tr:hover {
   background-color: #f9fafb;
 }
+
+.btn-edit{
+  padding: 4px 10px;
+  background-color: #7c3aed;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
