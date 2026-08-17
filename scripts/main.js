@@ -30,9 +30,14 @@ function renderTable() {
     const row = document.createElement('tr')
     const btnEdit = document.createElement('button')
     const actions = document.createElement('td')
+    const btnDelete = document.createElement('button')
 
+    
     btnEdit.textContent = 'Editar'
     btnEdit.classList.add('btn-edit')
+
+    btnDelete.textContent = 'Excluir'
+    btnDelete.classList.add('btn-delete')
 
     btnEdit.addEventListener('click', function () {
       const person = persons[index]
@@ -41,12 +46,21 @@ function renderTable() {
       editingIndex = index
     })
 
+    btnDelete.addEventListener('click', function () {
+      persons.splice(index, 1)
+      localStorage.setItem('persons', JSON.stringify(persons))
+      renderTable()
+    })
+
     row.innerHTML = `
       <td>${person.name}</td>
       <td>${person.birthDay}</td>
     `
     actions.appendChild(btnEdit)
+    actions.appendChild(btnDelete)
+
     row.appendChild(actions)
+    
     tableBody.appendChild(row)
 
   })
