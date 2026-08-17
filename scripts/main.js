@@ -41,9 +41,12 @@ function renderTable() {
 
     btnEdit.addEventListener('click', function () {
       const person = persons[index]
+
       fieldName.value = person.name
       fieldBirthday.value = formatToUSA(person.birthDay)
       editingIndex = index
+
+      btnSend.textContent = 'Salvar edição'
     })
 
     btnDelete.addEventListener('click', function () {
@@ -90,6 +93,7 @@ form.addEventListener('submit', function sendData(event) {
   localStorage.setItem('persons', JSON.stringify(persons))
 
   form.reset()
+  btnSend.textContent = 'Cadastrar'
   renderTable()
 })
 
